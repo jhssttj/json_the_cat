@@ -14,6 +14,6 @@ const breedFetcher = (inputURL) => {
 const urlConvert = (breed) => {
   let urlBreed = breed.toLowerCase().slice(2);
   return (`https://api.thecatapi.com/v1/breeds/search?q=${urlBreed}`)
-}
+};
 
 breedFetcher(urlConvert(process.argv[2]));
