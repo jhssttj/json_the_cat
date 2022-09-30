@@ -19,6 +19,7 @@ describe('fetchBreedDescription', () => {
   });
   it('returns an error text if a non valid cat breed goes in the input', (done) => {
     fetchBreedDescription('NotACat', (err, desc) => {
+      assert.equal(desc, null);
       const expectedDesc = "Error: Cat breed doesnt exist";
       // compare returned description
       assert.equal(expectedDesc, err);
